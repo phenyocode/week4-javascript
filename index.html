@@ -114,6 +114,23 @@
         </script>
     </div>
 
+    <!--Lesson 7-->
+    <div class="lesson">
+        <h2>Lesson 7: Function Parameters</h2>
+        <p><strong>Concept</strong>: Passing data info functions</p>
+
+        <button onclick="addNumbers(10, 7)">Add 10 + 7</button>
+        <button onclick="addNumbers(25, 18)">Add 25 + 18</button>
+        <button onclick="addNumbers(1245, 562)">Add 1245 + 562</button>
+        <div class="output" id="addition7">Result will show here.</div>
+
+        <script>
+            function addNumbers(num1, num2) {
+                document.getElementById("addition7").innerHTML = num1 + "+" + num2 + "=" + (num1 + num2)
+            }
+        </script>
+    </div>
+
 
 </body>
 </html>
