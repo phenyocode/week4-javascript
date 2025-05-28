@@ -323,6 +323,34 @@
         </script>
     </div>
 
+    <!--Lesson 14-->
+    <div class="lesson">
+        <h2>Lesson 14: Numbers and Strings Part 2 - Converting Text to Numbers</h2>
+        <p><strong>Concept:</strong>Converting string input to numbers for calculations</p>
+
+        <input type="text" id="textNumber1" placeholder="Enter first number" value="10">
+        <input type="text" id="textNumber2" placeholder="Enter second number" value="5">
+        <button onclick="convertAndAdd()">Convert and Add</button>
+        <div class="output" id="conversionOutput">Enter numbers and click to see conversion in action</div>
+
+        <script>
+            function convertAndAdd() {
+                var input1 = document.getElementById("textNumber1").value;
+                var input2 = document.getElementById("textNumber2").value;
+
+                //Without conversion (String concatenation)
+                var stringResult = input1 + input2;
+
+                //With conversion (Number addition)
+                var numberResult = parseInt(input1) + parseInt(input2);
+
+                document.getElementById("conversionOutput").innerHTML =
+                    "Without conversion: " + stringResult + "<br>" +
+                    "With conversion: " +numberResult;
+            }
+        </script>
+    </div>
+
 
 
 
