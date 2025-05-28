@@ -223,139 +223,215 @@
     <!--Lesson 11-->
 
     <div class="lesson">
-        <h2>Lesson 11: Mini Project - Login Form Part 2</h2>
-        <p><strong>Concept:</strong>Complete login verification with functions and conditionals</p>
-        <p><em>Try username: AppAcademy, password: 12@cademy</em></p>
+      <h2>Lesson 11: Mini Project - Login Form Part 2</h2>
+      <p>
+        <strong>Concept:</strong>Complete login verification with functions and
+        conditionals
+      </p>
+      <p><em>Try username: AppAcademy, password: 12@cademy</em></p>
 
-        <form>
-            <label for="usernameInput11">Username:</label>
-            <input type="text" id="usernameInput11"/> <br><br>
+      <form>
+        <label for="usernameInput11">Username:</label>
+        <input type="text" id="usernameInput11" /> <br /><br />
 
-            <label for="passwordInput11">Password:</label>
-            <input type="password" id="passwordInput11"/> <br><br>
+        <label for="passwordInput11">Password:</label>
+        <input type="password" id="passwordInput11" /> <br /><br />
 
-            <button type="button" onclick="verifyUser11()">Login</button>
-        </form>
-        <div class="output" id="message11">Enter credentials and click Login</div>
+        <button type="button" onclick="verifyUser11()">Login</button>
+      </form>
+      <div class="output" id="message11">Enter credentials and click Login</div>
 
-        <script>
-            function verifyUser11() {
-                var username = document.getElementById("usernameInput11").value;
-                var password = document.getElementById("passwordInput11").value;
-                checkUserCreds(username, password);
-            }
+      <script>
+        function verifyUser11() {
+          var username = document.getElementById("usernameInput11").value;
+          var password = document.getElementById("passwordInput11").value;
+          checkUserCreds(username, password);
+        }
 
-            function checkUserCreds(username, password) {
-                var adminUsername = "AppAcademy";
-                var adminPassword = "12@cademy";
+        function checkUserCreds(username, password) {
+          var adminUsername = "AppAcademy";
+          var adminPassword = "12@cademy";
 
-                if (username == adminUsername && password == adminPassword) {
-                    document.getElementById("message11").innerHTML = "Correct. Logging you in...";
-                } else {
-                    document.getElementById("message11").innerHTML = "Username or password is incorrect";
-                }
-            }
-        </script>
+          if (username == adminUsername && password == adminPassword) {
+            document.getElementById("message11").innerHTML =
+              "Correct. Logging you in...";
+          } else {
+            document.getElementById("message11").innerHTML =
+              "Username or password is incorrect";
+          }
+        }
+      </script>
     </div>
 
     <!--Lesson 12-->
     <div class="lesson">
-        <h2>Lesson 12: The SWITCH Statement</h2>
-        <p><strong>Concept:</strong>Using SWITCH Statements for multiple conditions</p>
+      <h2>Lesson 12: The SWITCH Statement</h2>
+      <p>
+        <strong>Concept:</strong>Using SWITCH Statements for multiple conditions
+      </p>
 
-        <label for="weather12">Select weather.</label>
-        <select id="weather12">
-            <option value="">Choose weather...</option>
-            <option value="sunny">Sunny</option>
-            <option value="windy">Windy</option>
-            <option value="rainy">Rainy</option>
-            <option value="snowy">Snowy</option>
-        </select>
-        <button onclick="getWeatherAdvice()">Get Advice</button>
-        <div class="output" id="advice12">Select weather and click for advice</div>
+      <label for="weather12">Select weather.</label>
+      <select id="weather12">
+        <option value="">Choose weather...</option>
+        <option value="sunny">Sunny</option>
+        <option value="windy">Windy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+      </select>
+      <button onclick="getWeatherAdvice()">Get Advice</button>
+      <div class="output" id="advice12">
+        Select weather and click for advice
+      </div>
 
-        <script>
-            function getWeatherAdvice() {
-                var weatherSelected = document.getElementById("weather12").value;
-                let advice;
+      <script>
+        function getWeatherAdvice() {
+          var weatherSelected = document.getElementById("weather12").value;
+          let advice;
 
-                switch (weatherSelected) {
-                    case "sunny":
-                        advice = "Wear your sunglasses and sunscreen!";
-                        break;
-                    case "windy":
-                        advice = "Wear a jacket and secure loose items!";
-                        break;
-                    case "rainy":
-                        advice = "Don't forget an umbrella!";
-                        break;
-                    case "snowy":
-                        advice = "Bundle up and wear warm boots!";
-                        break;
-                    default:
-                        advice = "Please select a weather condition from the list!"
-                }
-                document.getElementById("advice12").innerHTML = advice;
-            }
-        </script>
+          switch (weatherSelected) {
+            case "sunny":
+              advice = "Wear your sunglasses and sunscreen!";
+              break;
+            case "windy":
+              advice = "Wear a jacket and secure loose items!";
+              break;
+            case "rainy":
+              advice = "Don't forget an umbrella!";
+              break;
+            case "snowy":
+              advice = "Bundle up and wear warm boots!";
+              break;
+            default:
+              advice = "Please select a weather condition from the list!";
+          }
+          document.getElementById("advice12").innerHTML = advice;
+        }
+      </script>
     </div>
 
     <!--Lesson 13-->
     <div class="lesson">
-        <h2>Lesson 13: Numbers and Strings Part 1</h2>
-        <p><strong>Concept:</strong>Understanding how JavaScript handles text vs numbers</p>
+      <h2>Lesson 13: Numbers and Strings Part 1</h2>
+      <p>
+        <strong>Concept:</strong>Understanding how JavaScript handles text vs
+        numbers
+      </p>
 
-        <button onclick="demonstrateStringNumber()">Show String vs Number</button>
-        <div class="output" id="stringNumberOutput">Click to see the difference between strings and numbers</div>
+      <button onclick="demonstrateStringNumber()">Show String vs Number</button>
+      <div class="output" id="stringNumberOutput">
+        Click to see the difference between strings and numbers
+      </div>
 
-        <script>
-            function demonstrateStringNumber() {
-                var numberA = 5;
-                var numberB = 3;
-                var stringA = "5";
-                var stringB = "3";
+      <script>
+        function demonstrateStringNumber() {
+          var numberA = 5;
+          var numberB = 3;
+          var stringA = "5";
+          var stringB = "3";
 
-                document.getElementById("stringNumberOutput").innerHTML = 
-                    "Number addition: " + (numberA + numberB) + "<br>" +
-                    "String concatenation: " + (stringA + stringB) + "<br>" +
-                    "mixed: " + (numberA + stringB);
-            }
-        </script>
+          document.getElementById("stringNumberOutput").innerHTML =
+            "Number addition: " +
+            (numberA + numberB) +
+            "<br>" +
+            "String concatenation: " +
+            (stringA + stringB) +
+            "<br>" +
+            "mixed: " +
+            (numberA + stringB);
+        }
+      </script>
     </div>
 
     <!--Lesson 14-->
     <div class="lesson">
-        <h2>Lesson 14: Numbers and Strings Part 2 - Converting Text to Numbers</h2>
-        <p><strong>Concept:</strong>Converting string input to numbers for calculations</p>
+      <h2>
+        Lesson 14: Numbers and Strings Part 2 - Converting Text to Numbers
+      </h2>
+      <p>
+        <strong>Concept:</strong>Converting string input to numbers for
+        calculations
+      </p>
 
-        <input type="text" id="textNumber1" placeholder="Enter first number" value="10">
-        <input type="text" id="textNumber2" placeholder="Enter second number" value="5">
-        <button onclick="convertAndAdd()">Convert and Add</button>
-        <div class="output" id="conversionOutput">Enter numbers and click to see conversion in action</div>
+      <input
+        type="text"
+        id="textNumber1"
+        placeholder="Enter first number"
+        value="10"
+      />
+      <input
+        type="text"
+        id="textNumber2"
+        placeholder="Enter second number"
+        value="5"
+      />
+      <button onclick="convertAndAdd()">Convert and Add</button>
+      <div class="output" id="conversionOutput">
+        Enter numbers and click to see conversion in action
+      </div>
 
-        <script>
-            function convertAndAdd() {
-                var input1 = document.getElementById("textNumber1").value;
-                var input2 = document.getElementById("textNumber2").value;
+      <script>
+        function convertAndAdd() {
+          var input1 = document.getElementById("textNumber1").value;
+          var input2 = document.getElementById("textNumber2").value;
 
-                //Without conversion (String concatenation)
-                var stringResult = input1 + input2;
+          //Without conversion (String concatenation)
+          var stringResult = input1 + input2;
 
-                //With conversion (Number addition)
-                var numberResult = parseInt(input1) + parseInt(input2);
+          //With conversion (Number addition)
+          var numberResult = parseInt(input1) + parseInt(input2);
 
-                document.getElementById("conversionOutput").innerHTML =
-                    "Without conversion: " + stringResult + "<br>" +
-                    "With conversion: " +numberResult;
-            }
-        </script>
+          document.getElementById("conversionOutput").innerHTML =
+            "Without conversion: " +
+            stringResult +
+            "<br>" +
+            "With conversion: " +
+            numberResult;
+        }
+      </script>
     </div>
 
+    <!--Lesson 15-->
+    <div class="lesson">
+      <h2>
+        Lesson 15: Numbers and Strings Part 3 - Avoiding Conversion Errors
+      </h2>
+      <p>
+        <strong>Concept:</strong>Handling conversion errors and invalid input
+      </p>
 
+      <input type="text" id="safeInput1" placeholder="Enter first number" />
+      <input type="text" id="safeInput2" placeholder="Enter second number" />
+      <button onclick="safeConvertAndAdd()">Safe Convert and Add</button>
+      <div class="output" id="safeOutput">
+        Try entering both number and non-numbers for error handling
+      </div>
 
+      <script>
+        function safeConvertAndAdd() {
+          var input1 = document.getElementById("safeInput1").value;
+          var input2 = document.getElementById("safeInput2").value;
 
+          var num1 = parseInt(input1);
+          var num2 = parseInt(input2);
 
-
-
+          if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById("safeOutput").innerHTML =
+              "Error: Please enter valid numbers only!<br>" +
+              "Input 1: '" +
+              input1 +
+              "' → " +
+              (isNaN(num1) ? "Invalid" : "Valid") +
+              "<br>" +
+              "Input 2: '" +
+              input2 +
+              "' → " +
+              (isNaN(num2) ? "Invalid" : "Valid");
+          } else {
+            document.getElementById("safeOutput").innerHTML =
+              "Success! " + num1 + " + " + num2 + " = " + (num1 + num2);
+          }
+        }
+      </script>
+    </div>
   </body>
 </html>
