@@ -258,8 +258,49 @@
         </script>
     </div>
 
+    <!--Lesson 12-->
+    <div class="lesson">
+        <h2>Lesson 12: The SWITCH Statement</h2>
+        <p><strong>Concept:</strong>Using SWITCH Statements for multiple conditions</p>
 
+        <label for="weather12">Select weather.</label>
+        <select id="weather12">
+            <option value="">Choose weather...</option>
+            <option value="sunny">Sunny</option>
+            <option value="windy">Windy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+        <button onclick="getWeatherAdvice()">Get Advice</button>
+        <div class="output" id="advice12">Select weather and click for advice</div>
 
+        <script>
+            function getWeatherAdvice() {
+                var weatherSelected = document.getElementById("weather12").value;
+                let advice;
+
+                switch (weatherSelected) {
+                    case "sunny":
+                        advice = "Wear your sunglasses and sunscreen!";
+                        break;
+                    case "windy":
+                        advice = "Wear a jacket and secure loose items!";
+                        break;
+                    case "rainy":
+                        advice = "Don't forget an umbrella!";
+                        break;
+                    case "snowy":
+                        advice = "Bundle up and wear warm boots!";
+                        break;
+                    default:
+                        advice = "Please select a weather condition from the list!"
+                }
+
+                document.getElementById("advice12").innerHTML = advice;
+            }
+        </script>
+
+    </div>
 
 
 
